@@ -72,9 +72,9 @@ function copyStaticAssets() {
     fs.copyFileSync(notFoundSrcPath, notFoundDestPath);
 
     // 复制google.html文件
-    const googleSrcPath = path.join(__dirname, '..', 'src', 'pages', 'google886df887cda4f67f.html');
-    const googleDestPath = path.join(distDir, 'google886df887cda4f67f.html');
-    fs.copyFileSync(googleSrcPath, googleDestPath);
+    // const googleSrcPath = path.join(__dirname, '..', 'src', 'pages', 'google886df887cda4f67f.html');
+    // const googleDestPath = path.join(distDir, 'google886df887cda4f67f.html');
+    // fs.copyFileSync(googleSrcPath, googleDestPath);
 }
 
 // 生成首页
