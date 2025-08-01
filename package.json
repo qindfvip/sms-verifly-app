@@ -1,0 +1,21 @@
+{
+  "name": "sms-verifly-app",
+  "version": "1.0.0",
+  "description": "A responsive website for temporary phone numbers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.js",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "temporary-phone-number",
+    "sms",
+    "receive-sms"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
