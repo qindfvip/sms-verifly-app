@@ -70,6 +70,11 @@ function copyStaticAssets() {
     const notFoundSrcPath = path.join(__dirname, '..', 'src', 'pages', '404.html');
     const notFoundDestPath = path.join(distDir, '404.html');
     fs.copyFileSync(notFoundSrcPath, notFoundDestPath);
+
+    // 复制google.html文件
+    const googleSrcPath = path.join(__dirname, '..', 'src', 'pages', 'oogle886df887cda4f67f.html');
+    const googleDestPath = path.join(distDir, 'oogle886df887cda4f67f.html');
+    fs.copyFileSync(googleSrcPath, googleDestPath);
 }
 
 // 生成首页
