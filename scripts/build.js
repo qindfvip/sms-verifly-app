@@ -253,6 +253,15 @@ function generateRobotsTxt() {
 Allow: /
 
 # 禁止AI大模型抓取
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 User-agent: GPTBot
 Disallow: /
 
@@ -278,6 +287,9 @@ User-agent: ClaudeBot
 Disallow: /
 
 User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: meta-externalagent
 Disallow: /
 
 Sitemap: https://temporaryphone.le-ai.top/sitemap.xml`;
