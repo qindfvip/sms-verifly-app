@@ -1,5 +1,3 @@
-// 主页面JavaScript功能
-
 // 号码掩码函数，只显示前五位，后面用*号替换
 function maskNumber(number) {
     if (number.length <= 5) {
