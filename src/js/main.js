@@ -1,5 +1,13 @@
 // 主页面JavaScript功能
 
+// 号码掩码函数，只显示前五位，后面用*号替换
+function maskNumber(number) {
+    if (number.length <= 5) {
+        return number;
+    }
+    return number.substring(0, 5) + '*'.repeat(number.length - 5);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // 加载号码卡片
     loadNumberCards();
@@ -127,12 +135,4 @@ function showCopySuccess(button) {
         button.innerHTML = originalText;
         button.classList.remove('copied');
     }, 2000);
-}
-
-// 号码掩码函数，只显示前五位，后面用*号替换
-function maskNumber(number) {
-    if (number.length <= 5) {
-        return number;
-    }
-    return number.substring(0, 5) + '*'.repeat(number.length - 5);
 }
