@@ -7,6 +7,15 @@ if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
 
+// 号码掩码函数，只显示前五位，后面用*号替换
+function maskNumber(number) {
+    if (number.length <= 5) {
+        return number;
+    }
+    const masked = number.substring(0, 5) + '*'.repeat(number.length - 5);
+    return masked;
+}
+
 // 复制静态资源
 function copyStaticAssets() {
     // 复制CSS目录
@@ -80,11 +89,13 @@ function generateHomePage(numbers) {
     // 生成号码卡片HTML
     let cardsHTML = '<div class="number-cards">';
     numbers.forEach(number => {
+        const maskedNumber = maskNumber(number.number);
+        console.log(`Processing number: ${number.number}, masked: ${maskedNumber}`);
         cardsHTML += `
             <div class="number-card">
                 <h3>${number.country}</h3>
                 <p class="number-id">ID: ${number.id}</p>
-                <p class="number">${number.number}</p>
+                <p class="number">${maskedNumber}</p>
                 <button class="copy-btn" data-number="${number.number}">Copy Number</button>
                 <a href="./country/${number.country_code}/${number.id}.html" class="view-details">View Details</a>
             </div>

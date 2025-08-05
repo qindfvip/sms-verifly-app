@@ -34,7 +34,7 @@ function loadNumberCards() {
                     <div class="number-card">
                         <h3>${number.country}</h3>
                         <p class="number-id">ID: ${number.id}</p>
-                        <p class="number">${number.number}</p>
+                        <p class="number">${maskNumber(number.number)}</p>
                         <button class="copy-btn copy-icon" data-number="${number.number}">Copy Number</button>
                         <a href="./country/${number.country_code}/${number.id}.html" class="view-details">View Details</a>
                     </div>
@@ -127,4 +127,12 @@ function showCopySuccess(button) {
         button.innerHTML = originalText;
         button.classList.remove('copied');
     }, 2000);
+}
+
+// 号码掩码函数，只显示前五位，后面用*号替换
+function maskNumber(number) {
+    if (number.length <= 5) {
+        return number;
+    }
+    return number.substring(0, 5) + '*'.repeat(number.length - 5);
 }

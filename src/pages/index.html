@@ -69,5 +69,23 @@
     </footer>
     
     <script src="../js/main.js"></script>
+    <script>
+        // 在静态HTML中也实现号码掩码功能
+        function maskNumber(number) {
+            if (number.length <= 5) {
+                return number;
+            }
+            return number.substring(0, 5) + '*'.repeat(number.length - 5);
+        }
+        
+        // 处理页面上已有的号码显示
+        document.addEventListener('DOMContentLoaded', function() {
+            const numberElements = document.querySelectorAll('.number');
+            numberElements.forEach(function(element) {
+                const originalNumber = element.textContent;
+                element.textContent = maskNumber(originalNumber);
+            });
+        });
+    </script>
 </body>
 </html>
