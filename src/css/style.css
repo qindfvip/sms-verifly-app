@@ -133,40 +133,27 @@ main {
     color: #333;
 }
 
-.number-card .copy-btn, #copyButton {
-    padding: 0.6rem 1.2rem;
+.number-card .copy-btn {
+    padding: 0.5rem 1rem;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    &::after {
+        content: "📋Copy Number";
+    }
 }
 
-.number-card .copy-btn:hover, #copyButton:hover {
+.view-details {
+    /* 原有样式 */
+    &::after {
+        content: "View Details";
+    }
+}
+
+.number-card .copy-btn:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.number-card .copy-btn:active, #copyButton:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.number-card .copy-btn.copied, #copyButton.copied {
-    background-color: #28a745;
-}
-
-/* 添加图标支持 */
-.copy-icon::before {
-    content: '📋';
-    margin-right: 0.3rem;
 }
 
 /* Messages section */
