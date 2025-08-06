@@ -146,15 +146,6 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    &::after {
-        content: "Copy Number";
-    }
-}
-
-.view-details {
-    &::after {
-        content: "View Details";
-    }
 }
 
 .number-card .copy-btn:hover, #copyButton:hover {
