@@ -90,7 +90,7 @@ function generateHomePage(numbers) {
         cardsHTML += `
             <div class="number-card">
                 <h3>${number.country}</h3>
-                <p class="number-id">ID: ${maskNumber(number.number)}</p>
+                <p class="number-id">ID: ${maskNumber(number.id)}</p>
                 <p class="number">${maskNumber(number.number)}</p>
                 <button class="copy-btn" data-number="${number.number}">Copy Number</button>
                 <a href="./country/${number.country_code}/${number.id}.html" class="view-details">View Details</a>
@@ -140,7 +140,7 @@ function generateCountryPages(numbers) {
             listHTML += `
                 <div class="number-card">
                     <h3>${number.country}</h3>
-                    <p class="number-id">ID: ${maskNumber(number.number)}</p>
+                    <p class="number-id">ID: ${maskNumber(number.id)}</p>
                     <p class="number">${maskNumber(number.number)}</p>
                     <button class="copy-btn" data-number="${number.number}">Copy Number</button>
                     <a href="./${number.id}.html" class="view-details">View Details</a>
