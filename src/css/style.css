@@ -141,11 +141,13 @@ main {
     border-radius: 4px;
     cursor: pointer;
     &::after {
-        content: "📋Copy Number";
+        content: "Copy Number";
     }
 }
 
 .view-details {
+    text-decoration: none;
+    color: #007bff;
     /* 原有样式 */
     &::after {
         content: "View Details";
